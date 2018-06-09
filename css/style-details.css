@@ -14,29 +14,29 @@
 }
 
 body {
+	overflow: scroll;
 	font-family: 'Courgette', cursive;
-	text-transform: none;
 }
 
 .ps-container {
-	position: absolute;
+	/*position: relative;*/
 	width: 100%;
 	height: 100%;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	text-transform: uppercase;
 	color: #555;
 	background: #fff;
 }
 
 .ps-container > div {
-	position: absolute;
+	/*position: relative;*/
 	width: 50%;
 }
 
 .ps-container > div > div,
 .ps-slidewrapper > nav,
 .ps-slides > div {
-	position: absolute;
+	/*position: absolute;*/
 }
 
 .ps-header {
@@ -60,7 +60,7 @@ body {
 .ps-contentwrapper {
 	top: 150px;
 	bottom: 0px;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	z-index: 1000;
 }
 
@@ -135,7 +135,7 @@ body {
 	right: 0px;
 	top: 0px;
 	height: 100%;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 .ps-slides {
@@ -147,7 +147,7 @@ body {
 .ps-slides > div {
 	width: 100%;
 	height: 100%;
-	box-shadow: inset 0 0 0 9999px rgba(179,157,250,0.1);
+	/*box-shadow: inset 0 0 0 9999px rgba(179,157,250,0.1);*/
 }
 
 .ps-slidewrapper > nav {
@@ -159,16 +159,16 @@ body {
 }
 
 .ps-slidewrapper > nav > a {
-	width: 50%;
+	width: 100%;
 	height: 100%;
-	position: relative;
 	float: left;
 	box-shadow: inset 0 0 0 9999px rgba(207,227,206,0.8);
-	outline: none;
+	text-align: center;
+	padding-top: 15px;
 }
 
 .ps-slidewrapper > nav > a:first-child {
-	box-shadow: inset 0 0 0 9999px rgba(233,217,141,0.8);
+	/*box-shadow: inset 0 0 0 9999px rgba(233,217,141,0.8);*/
 }
 
 .no-touch .ps-slidewrapper > nav > a {
@@ -177,6 +177,7 @@ body {
 	-ms-transition: box-shadow 0.4s ease-in-out;
 	-o-transition: box-shadow 0.4s ease-in-out;
 	transition: box-shadow 0.4s ease-in-out;
+	text-transform: none;
 }
 
 .no-touch .ps-slidewrapper > nav > a:hover {
@@ -188,7 +189,7 @@ body {
 }
 
 .ps-slidewrapper > nav > a:after {
-	content: '';
+	/*content: '';*/
 	position: absolute;
 	width: 100px;
 	height: 100px;
@@ -242,29 +243,31 @@ body {
 		text-align: center;
 	}
 
+	.js .ps-header img {
+		padding:20px;
+	}
+
 	.js .ps-header h1 {
 		line-height: 50px;
 		padding: 0px 20px;
 		letter-spacing: 4px;
 	}
 
-	.js .ps-header img {
-		padding:20px;
-	}
-
 	.js .ps-slides {
 		bottom: 320px;
-		top: 140px;
+		height: 350px;
+		text-align: center;
 	}
 
+	/*.js .ps-slides img{
+		padding:20px;
+	}*/
+
 	.js .ps-slidewrapper > nav {
-		height: 100px;
+		height: 50px;
 	}
 
 	.js .ps-contentwrapper {
-		top: auto;
-		height: 220px;
-		bottom: 100px;
 	}
 
 	.js .ps-content {
@@ -273,9 +276,13 @@ body {
 
 	.js .ps-content h2 {
 		border-right: none;
-		font-size: 18px;
+		font-size: 28px;
 		margin: 10px 0;
 		padding-top: 0;
+		/*font-family: 'Yesteryear', cursive;*/
+		font-family: 'Berkshire Swash', cursive;
+		text-transform: none;
+		text-align: center;
 	}
 
 	.js .ps-content span.ps-price {
@@ -291,8 +298,6 @@ body {
 		line-height: 20px;
 		border: none;
 		padding: 5px 10px;
-		height: 80px;
-		overflow-y: scroll;
 	}
 
 	.js .ps-content a:last-child {
